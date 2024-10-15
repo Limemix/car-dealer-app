@@ -1,11 +1,11 @@
 import { Suspense } from 'react';
-import FilterForm from '@/components/FilterSidebar';
+import Filter from '@/components/Filter';
 import axios from 'axios';
 
 export async function generateStaticParams() {
   try {
     const response = await axios.get(
-      'https://vpic.nhtsa.dot.gov/api/vehicles/GetMakesForVehicleType/car?format=json'
+      process.env.NEXT_PUBLIC_ALL_DATA + "car?format=json"
     );
 
     const makes = response.data.Results;
@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-white">
       <Suspense fallback={<div>Loading vehicle models...</div>}>
-        <FilterForm />
+        <Filter />
       </Suspense>
 
     </div>

@@ -1,9 +1,7 @@
-// src/components/VehicleList.jsx
 export default function VehicleList({ models, makeName }) {
     return (
       <div>
-        {/* Используем makeName для заголовка */}
-        <h2 className="text-2xl font-bold mb-4">{makeName}</h2>
+        <h2 className="text-2xl font-bold mb-4">Make: {makeName}</h2>
         <table className="min-w-full bg-white">
           <thead>
             <tr>

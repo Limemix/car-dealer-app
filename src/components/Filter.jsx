@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useMakes } from '@/context/MakesContext';
 
-export default function FilterSidebar({ make = {} }) {
+export default function Filter({ make = {} }) {
   const { makes, loading } = useMakes();
   const [selectedMake, setSelectedMake] = useState(make.makeId ?? '');
   const [selectedYear, setSelectedYear] = useState(make.year ?? '');
