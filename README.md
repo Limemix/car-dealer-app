@@ -1,4 +1,4 @@
-## How to run a project
+## How to run the project
 
 It's simple, just run the development server:
 
